@@ -1,5 +1,5 @@
 :root {
-    --max-width: 1440px; 
+    --max-width: 1024px; 
     --color-primary: #6aff4d;
     --color-secondary: #303030;
     --color-black: rgb(45, 45, 45);
@@ -11,6 +11,21 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
+}
+
+body {
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+}
+
+hr {
+    width: 200px;
+    justify-self: center;
+    margin: auto;
+    background-color: var(--color-primary);
+    border: none;
+    height: 2px;
+    margin-bottom: 1rem;
 }
 
 header {
@@ -82,7 +97,36 @@ nav li a:hover {
 }
 
 .hero-section h2 {
-    padding-bottom: 1rem;
+    padding: 1rem;
+}
+
+.hero-section p {
+    padding: 0 .5rem;
+}
+
+.about-container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-secondary);
+    
+}
+
+.about-container h3 {
+    text-align: center;
+    padding: 3rem 0 .5rem 0;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.about-container p {
+    padding: .5rem;
+}
+
+.about-wrapper {
+    max-width: var(--max-width);
 }
 
 @media only screen and (min-width: 769px) {
@@ -118,6 +162,4 @@ nav li a:hover {
     .hero-section p {
         font-size: 1.2rem;
     }
-
-
 }
