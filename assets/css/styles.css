@@ -1,3 +1,4 @@
+/* Variables */
 :root {
     --max-width: 1024px; 
     --color-primary: #6aff4d;
@@ -82,16 +83,21 @@ nav li a:hover {
     border-bottom: 2px solid var(--color-primary);
 }
 
+/* Flexbox class used in all the section */
+.flex-container {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-secondary);
+}
+
 .hero-section{
     height: 20rem;
     background-image: url(../images/bg-hero.jpg);
     background-position: center;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-    text-align: center;  
     color: var(--color-white);  
 }
 
@@ -107,23 +113,13 @@ nav li a:hover {
 .hero-section p {
     padding: 0 .5rem;
 }
-
-.flex-container {    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--color-secondary);
-    
-}
-
+/* Grouping classes following the DRY principle */
 .about-wrapper,
 .work-wrapper,
 .contacts-wrapper {
     max-width: var(--max-width);
 }
-
+/* Grouping classes following the DRY principle */
 .about-wrapper h3,
 .work-wrapper h3,
 .contacts-wrapper h3 {
@@ -132,7 +128,7 @@ nav li a:hover {
     font-size: 2rem;
     color: var(--color-primary);
 }
-
+/* Grouping classes following the DRY principle */
 .about-wrapper p,
 .work-wrapper p 
 .contacts-wrapper p{
@@ -240,6 +236,8 @@ footer hr {
 footer p {
     font-size: 14px;
 }
+
+/* Media queries to achieve mobile and tablet responsive */
 
 @media only screen and (min-width: 500px) {
     .projects-grid {
